@@ -1,5 +1,5 @@
 # EnergyADE Enrichment
-The EnergyADE Enrichment plug-in ...
+The EnergyADE Enrichment is a plugin for the [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) ...
 
 
 ## User Interface
