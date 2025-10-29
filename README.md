@@ -1,9 +1,10 @@
 # EnergyADE Enrichment
 The EnergyADE Enrichment is a plugin for the [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) ...
 
-<img width="901" height="798" alt="grafik" src="https://github.com/user-attachments/assets/5dc5da48-fa50-4eaf-9396-88e32be6f6cf" />
-<img width="901" height="798" alt="grafik" src="https://github.com/user-attachments/assets/918731ca-3fec-4bca-aea6-d0991e78c8ba" />
-<img width="693" height="798" alt="grafik" src="https://github.com/user-attachments/assets/067d731c-9173-49cf-aed7-f686b14218c7" />
+<img width="1270" height="1381" alt="ADE_Enrichment_1" src="https://github.com/user-attachments/assets/f50060fc-49b0-4f4b-a5e9-26c19db95f12" />
+<img width="1253" height="1374" alt="ADE_Enrichment_2" src="https://github.com/user-attachments/assets/87aa98ab-2449-4307-bc42-1760eab315a4" />
+<img width="1276" height="1378" alt="ADE_Enrichment_3" src="https://github.com/user-attachments/assets/b18ff0c5-bac3-42cf-a55c-0184ea7ee45b" />
+
 
 ## User Interface
 The user interface is based on ...
@@ -26,4 +27,5 @@ The user interface is based on ...
 	date         = {2024}
 }
 ```
+
 
