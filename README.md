@@ -1,5 +1,5 @@
 # EnergyADE Enrichment
-The EnergyADE Enrichment is a plugin for the [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) ...
+The EnergyADE Enrichment is a plugin for the [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) for enrichment of CityGML building models with building physics and building usage parameters. The EnergyADE extension is used to store these additional parameters in a standardized manner.
 
 <img width="1260" height="1370" alt="ADE_Enrichment_1" src="https://github.com/user-attachments/assets/f50060fc-49b0-4f4b-a5e9-26c19db95f12" />
 <img width="1260" height="1370" alt="ADE_Enrichment_2" src="https://github.com/user-attachments/assets/87aa98ab-2449-4307-bc42-1760eab315a4" />
@@ -27,6 +27,7 @@ The user interface is based on ...
 	date         = {2024}
 }
 ```
+
 
 
 
