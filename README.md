@@ -28,10 +28,10 @@ The user interface is based on ...
 
 ```bibtex
 @software{SDM_Plugin_EnergyADE_Enrichment,
-	title        = {SDM_Plugin_EnergyADE_Enrichment},
-	author       = {{Andreas Geiger}},
+	title        = {{SDM\_Plugin\_EnergyADE\_Enrichment}},
+	author       = {Andreas Geiger},
 	url          = {https://github.com/KIT-IAI/SDM_Plugin_EnergyADE_Enrichment},
-	date         = {2024}
+	year         = {2024}
 }
 ```
 
