@@ -4,7 +4,7 @@ The EnergyADE Enrichment is a plugin for the [KITModelViewer](https://github.com
 Regardless of whether a building or a district is being processed, the module primarily attempts to interpret the GML standard attributes function and yearOfConstruction in order to perform automatic enrichment. The following requirements apply to automatic enrichment:
 
 -	The assignment of usage profiles relies on the ALKIS building code provided in the attribute function.
--	The assignment of the material definitions results from the attribute yearOfConstruction and is obtained from the TABULA data.
+-	The assignment of the material definitions results from the attribute yearOfConstruction and is obtained from the TABULA data, using the [NaiS database](https://github.com/KIT-IAI/SDM_NaiS-DB).
 
 Based on the parameters provided by the buildings, the enrichment process automatically assigns usage profiles and the material information. If this automatic assignment is not possible for one or more buildings, manual assignment to a corresponding ALKIS code or a corresponding building age class is also possible. 
 
