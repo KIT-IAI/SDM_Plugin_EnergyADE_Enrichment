@@ -40,8 +40,14 @@ The user interface is based on WPF (Windows Presentation Foundation) and is deve
 @inproceedings{Geiger.2024,
    author       = {Geiger, Andreas; Häfele, Karl-Heinz; Hagenmeyer, Veit},
    title        = {CityGML Data Preparation for Thermal Building Simulation on District Level},
-   booktitle    = {IBPSA (International Building Performance Simulation Association)},
-   year         = {2024}
+  booktitle     = {Proceedings of BauSim Conference 2024: 10th Conference of IBPSA-DACH},
+  year          = {2024},
+  editor        = {Bednar, Thomas and Sint, Sabine},
+  pages         = {[104--111]},
+  address       = {Wien, Österreich},
+  month         = {September},
+  publisher     = {TU Wien},
+  isbn          = {978-3-200-10068-8}
 }
 ```
 
