@@ -25,6 +25,7 @@ The user interface is based on WPF (Windows Presentation Foundation) and is deve
 |curl                 |vcpkg install curl triplet=x64-windows     |
 |fmt                  |vcpkg install fmt triplet=x64-windows      |
 |geographiclib        |vcpkg install geographiclib triplet=x64-windows |
+|libtess2             |vcpkg install libtess2 triplet=x64-windows |
 
 ## How to cite
 
