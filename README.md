@@ -14,7 +14,7 @@ Based on the parameters provided by the buildings, the enrichment process automa
 
 
 ## User Interface
-The user interface is based on ...
+The user interface is based on WPF (Windows Presentation Foundation) and is developed in C# using the .NET Framework 4.8.
 
 ## Dependencies
 
