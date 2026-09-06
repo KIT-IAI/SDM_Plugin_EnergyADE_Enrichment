@@ -1,0 +1,302 @@
+﻿<local:BaseUserControl x:Class="KIT.BuW.AdvEnrichment.UI.OccupancyUserDef"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KIT.BuW.AdvEnrichment.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+  <Expander>
+    <Expander.Resources>
+      <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="..\Resources\Styles.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+    </Expander.Resources>
+
+    <Expander.Header>
+      <Label Content="Occupancy"
+                       Style="{StaticResource Heading1}" />
+    </Expander.Header>
+    
+    <StackPanel Orientation="Vertical">
+      <StackPanel.Resources>
+        <Style TargetType="Label">
+          <Setter Property="Padding"
+                        Value="5" />
+        </Style>
+        <Style TargetType="TextBox">
+          <Setter Property="Padding"
+                        Value="2" />
+          <Setter Property="Margin"
+                        Value="3" />
+          <Setter Property="FontWeight"
+                        Value="Bold" />
+        </Style>
+        <Style TargetType="ComboBox">
+          <Setter Property="Padding"
+                        Value="2" />
+          <Setter Property="FontWeight"
+                        Value="Bold" />
+          <Setter Property="Margin"
+                        Value="3" />
+        </Style>
+        <Style TargetType="CheckBox">
+          <Setter Property="Padding"
+                        Value="2" />
+          <Setter Property="Margin"
+                        Value="3" />
+          <Setter Property="VerticalAlignment"
+                        Value="Center" />
+          <Setter Property="HorizontalAlignment"
+                        Value="Center" />
+        </Style>
+        <Style TargetType="Image">
+          <Setter Property="Height"
+                        Value="24" />
+        </Style>
+        <Style TargetType="RadioButton">
+          <Setter Property="Margin"
+                        Value="3 10 3 3" />
+        </Style>
+      </StackPanel.Resources>
+
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="3*" />
+          <ColumnDefinition Width="5*" />
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition Width="60" />
+          <ColumnDefinition Width="60" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+          <Style TargetType="Label">
+            <Setter Property="Padding"
+                              Value="5" />
+          </Style>
+          <Style TargetType="TextBox">
+            <Setter Property="Padding"
+                              Value="2" />
+            <Setter Property="Margin"
+                              Value="3" />
+          </Style>
+          <Style TargetType="ComboBox">
+            <Setter Property="Padding"
+                              Value="2" />
+            <Setter Property="Margin"
+                              Value="3" />
+          </Style>
+          <Style TargetType="CheckBox">
+            <Setter Property="Padding"
+                              Value="2" />
+            <Setter Property="Margin"
+                              Value="3" />
+            <Setter Property="VerticalAlignment"
+                              Value="Center" />
+          </Style>
+        </Grid.Resources>
+        <Label Grid.Row="1"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Usage Profile Types" />
+        <Label Grid.Row="3"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Heating" />
+        <Label Grid.Row="4"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Cooling" />
+        <Label Grid.Row="5"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Heat gain occupants" />
+        <Label Grid.Row="6"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Heat gain electrical devices" />
+        <Label Grid.Row="7"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Lighting" />
+        <Label Grid.Row="8"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Ventilation" />
+        <Label Grid.Row="9"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Shading" />
+        <ComboBox Grid.Row="1"
+                            Grid.Column="1"
+                            x:Name="cbUsageProfileSet"
+                            ItemsSource="{Binding Path=myUsageProfileList.UsageProfileSets}"
+                            DisplayMemberPath="Key"
+                            SelectionChanged="ComboBox_UsageProfileSet_SelectionChanged"
+                            Grid.ColumnSpan="2">
+        </ComboBox>
+        <Label Grid.Row="2"
+                         Grid.Column="1"
+                         Style="{StaticResource HeaderLabel1}">Daily Profiles</Label>
+        <Label Grid.Row="2"
+                         Grid.Column="4"
+                         HorizontalAlignment="Center"
+                         Style="{StaticResource HeaderLabel1}">Info</Label>
+        <ComboBox Grid.Row="3"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileHeating}"
+                            x:Name="UsageProfileHeatingList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="4"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileCooling}"
+                            x:Name="UsageProfileCoolingList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="5"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileHeatGainOccupants}"
+                            x:Name="UsageProfileHeatGainOccupantsList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="6"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileHeatGainElectricalDevices}"
+                            x:Name="UsageProfileHeatGainElectricalDevicesList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="7"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileLighting}"
+                            x:Name="UsageProfileLightingList"
+                            DisplayMemberPath="Key"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="8"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileVentilation}"
+                            x:Name="UsageProfileVentilationList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <ComboBox Grid.Row="9"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Path=myUsageProfileShading}"
+                            x:Name="UsageProfileShadingList"
+                            DisplayMemberPath="Key"
+                            SelectedValuePath="Value"
+                            SelectionChanged="ComboBox_UsageProfile_SelectionChanged">
+        </ComboBox>
+        <Button Grid.Row="3"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="4"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="5"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="6"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="7"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="8"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Button Grid.Row="9"
+                          Grid.Column="2"
+                          Content="Edit"
+                          HorizontalAlignment="Center"
+                          Width="60"
+                          Click="Button_Click_Edit_Profile"/>
+        <Image Grid.Row="3"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileHeating"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="4"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileCooling"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="5"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileHeatGainOccupants"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="6"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileHeatGainElectricalDevices"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="7"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileLighting"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="8"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileVentilation"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+        <Image Grid.Row="9"
+                         Grid.Column="4"
+                         Source="../Resources/info.png"
+                         Tag="UsageProfileShading"
+                         ToolTip=""
+                         ToolTipOpening="Image_ToolTipOpening" />
+      </Grid>
+    </StackPanel>
+  </Expander>
+
+</local:BaseUserControl>

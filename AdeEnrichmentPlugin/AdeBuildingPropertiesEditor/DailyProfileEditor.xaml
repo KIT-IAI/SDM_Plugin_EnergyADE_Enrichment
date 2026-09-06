@@ -1,0 +1,54 @@
+﻿<Window x:Class="KIT.BuW.AdvEnrichment.AdeBuildingPropertyEditor.DailyProfileEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KIT.BuW.AdvEnrichment.AdeBuildingPropertyEditor"
+        mc:Ignorable="d"
+        Title="DailyProfileEditor" Height="665" Width="562.5">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="1"
+           Grid.Column="1"
+           HorizontalAlignment="Right"
+           Content="Type" />
+    <TextBox Grid.Row="1"
+             Grid.Column="2"
+             IsReadOnly="True"
+             Text="TextBox"/>
+    <Label Grid.Row="2"
+           Grid.Column="1"
+           HorizontalAlignment="Right"
+           Content="Day Type" />
+    <ComboBox x:Name="DayType"
+              Grid.Row="2"
+              Grid.Column="2">
+      <ComboBoxItem Content="Typical Day"></ComboBoxItem>
+      <ComboBoxItem Content="Weekday"></ComboBoxItem>
+      <ComboBoxItem Content="Weekend"></ComboBoxItem>
+    </ComboBox>
+
+  </Grid>
+</Window>

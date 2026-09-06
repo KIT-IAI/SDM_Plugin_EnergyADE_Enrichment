@@ -1,0 +1,4 @@
+﻿veryLight
+light
+medium
+heavy

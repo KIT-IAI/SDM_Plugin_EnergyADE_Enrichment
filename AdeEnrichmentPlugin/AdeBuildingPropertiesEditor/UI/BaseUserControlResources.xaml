@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conv="clr-namespace:KIT.BuW.AdvEnrichment">
+  <!-- Gemeinsame Converter / Ressourcen für alle abgeleiteten UserControls -->
+  <conv:BuildingFunctionCalculationBasisToBooleanConverter x:Key="BuildingFunctionCalculationBasisToBooleanConverter"/>
+  <conv:BuildingFunctionCalculationBasisToBooleanNotConverter x:Key="BuildingFunctionCalculationBasisToBooleanNotConverter"/>
+  <conv:ConstructionDefinitionTypeToBooleanConverter x:Key="ConstructionDefinitionTypeToBooleanConverter"/>
+  <conv:BooleanAndConverter x:Key="BooleanAndConverter"/>
+  <!-- Weitere gemeinsame Ressourcen hier -->
+</ResourceDictionary>

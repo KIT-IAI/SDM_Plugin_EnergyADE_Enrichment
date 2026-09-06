@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<item id="Blah">
+		<value>
+      <![CDATA[Das <b>ist</b> <i>ein</i> Test.
+    <img src="https://sdm-web.cloud.iai.kit.edu/StartMenu/2020-11-13-Monitoring.png" width="100px"/>
+    <img src="info.png"/>
+    Hier sollte ein <a href="hyperlink.com">Link</a> sein!
+    ]]>
+    </value>
+	</item>
+  <item id="DefaultStoreyHeight">
+    <value>
+      <![CDATA[<u>The default story height assumed when no explicit storey height is found in the building</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:storeyHeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+    </value>
+  </item>
+  <item id="RoofOpeningPercentage">
+		<value>
+      <![CDATA[<u>Opening Percentage of roofs</u><br/>CityGML Energy ADE: energy:ThermalOpening<br/> gbXML: not applicable<br/> IFC: not applicable]]>
+    </value>
+	</item>
+	<item id="BuildingFunction">
+		<value>
+			<![CDATA[<u>Function of the building</u><br/><font color=#000000>CityGML Energy ADE:</font> bldg:function<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: YearOfConstruction]]>
+		</value>
+	</item>
+	<item id="YearOfConstruction">
+		<value>
+			<![CDATA[<u>Building Year of Construction</u><br/><font color=#000000>CityGML Energy ADE:</font> bldg:yearOfConstruction<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: YearOfConstruction]]>
+		</value>
+	</item>
+	<item id="WallsOpeningPercentage">
+		<value>
+			<![CDATA[<u>Opening Percentage of walls</u><br/>CityGML Energy ADE: energy:ThermalOpening<br/> gbXML: not applicable<br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="AirInfiltrationRate">
+		<value>
+			<![CDATA[<u>Air Infiltration Rate</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:infiltrationRate<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: YearOfConstruction]]>
+		</value>
+	</item>
+	<item id="BuildingSizeType">
+		<value>
+			<![CDATA[<u>Building Size Type</u><br/><font color=#000000>CityGML Energy ADE:</font> not applicable<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="ConstructionWeight">
+		<value>
+			<![CDATA[<u>Construction Weight</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="UValueWalls">
+		<value>
+			<![CDATA[<u>U-Values of the complete Wall Construction</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="UValueRoofs">
+		<value>
+			<![CDATA[<u>U-Values of the complete Roof Construction</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="UValueGroundPlates">
+		<value>
+			<![CDATA[<u>U-Values of the complete Ground Plate Construction</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="UValueWindows">
+		<value>
+			<![CDATA[<u>U-Values of the complete Window Construction</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<!-- Zone -->
+	<item id="SingleThermalZone">
+		<value>
+			<![CDATA[<u>Single thermal zone</u><br/>If this option is checked all building parts are merged to one thermal zone,<br/>otherwise for each building part a separate thermal zone will be used.]]>
+		</value>
+	</item>
+	<item id="IsHeated">
+		<value>
+			<![CDATA[<u>Indicates if the building is heated</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:ThermalZone@isHeated<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+	<item id="IsCooled">
+		<value>
+			<![CDATA[<u>Indicates if the building is cooled</u><br/><font color=#000000>CityGML Energy ADE:</font> energy:constructionWeight<br/> <font color=#000000>gbXML:</font> not applicable <br/> IFC: not applicable]]>
+		</value>
+	</item>
+</items>

@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css" type="text/css">
+  <style>
+    .map {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+  <title>OpenLayers example</title>
+</head>
+<body>
+  <div id="map" class="map"></div>
+  <script type="text/javascript">
+    var defaultStyle = new ol.style.Style({
+      fill: new ol.style.Fill({
+        color: 'rgba(0, 128, 255, 0.2)',
+        weight: 1
+      }),
+      stroke: new ol.style.Stroke({
+        color: 'rgba(0, 128, 255, 1.0)',
+        width: 2
+      })
+    });
+    var hiliteStyle = new ol.style.Style({
+      fill: new ol.style.Fill({
+        color: 'rgba(255, 128, 0, 0.2)',
+        weight: 1
+      }),
+      stroke: new ol.style.Stroke({
+        color: 'rgba(255, 128, 0, 0.8)',
+        width: 2
+      })
+    });
+
+    function addModelPoligon(args) {
+      var params = JSON.parse(args);
+      var ring = [];
+      params.points.forEach(function(pt) {
+        ring.push([pt.Lon, pt.Lat]);
+      });
+      if (ring[0] !== ring[ring.length-1]) {
+        ring.push(ring[0]);
+      }
+      //alert(JSON.stringify(ring));
+      makeNewLayerFromRing(ring, params.id);
+    }
+
+    function makeNewLayerFromRing(ring, itemId) {
+      var polygon = new ol.geom.Polygon([ring]);
+      polygon.transform('EPSG:4326', 'EPSG:3857');
+      var feature = new ol.Feature(polygon);
+
+      // Create vector source and the feature to it.
+      var vectorSource = new ol.source.Vector();
+      vectorSource.addFeature(feature);
+
+      // Create vector layer attached to the vector source.
+      var vectorLayer = new ol.layer.Vector({
+        source: vectorSource,
+        id: itemId
+      });
+      vectorLayer.set('id', itemId);
+      vectorLayer.setStyle(defaultStyle);
+
+      // Add the vector layer to the map.
+      map.addLayer(vectorLayer);
+    }
+
+    function setViewParams(args) {
+      var params = JSON.parse(args);
+      if (params.center) { map.getView().setCenter(ol.proj.fromLonLat([params.center.Lon, params.center.Lat])); }
+      if (params.zoom) { map.getView().setZoom(params.zoom); }
+    }
+
+    // Update the display state of a specific layer
+    function setItemHilite(id, bHilite) {
+
+      // Search for a layer with the given ID
+      var layer = null;
+      map.getLayers().forEach(function (l) {
+        if (l instanceof ol.layer.Vector) {
+          if (l.get('id') == id) { layer = l; }
+        }
+      });
+
+      // If a layer is found, change the display style to either default or hilite
+      if (layer) {
+        layer.setStyle(bHilite ? hiliteStyle : defaultStyle);
+      }
+    }
+
+    // Initialize the map layer
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([7.42939, 49.09875]),
+        zoom: 10
+      })
+    });
+    //alert("Initial Setup Complete");
+    //testInteraction();
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="KIT.BuW.AdvEnrichment.UI.ThermalZoneStats"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KIT.BuW.AdvEnrichment.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+  <Expander IsExpanded="True">
+    <Expander.Resources>
+      <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="..\Resources\Styles.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+    </Expander.Resources>
+
+    <Expander.Header>
+      <Label Content="Thermal Zones"
+                       Style="{StaticResource Heading1}" />
+    </Expander.Header>
+    
+    <StackPanel Orientation="Vertical">
+      <Grid Name="gridThermalZoneStats">
+        <Grid.Resources>
+          <Style TargetType="{x:Type Label}">
+            <Setter Property="Padding"
+                              Value="5" />
+          </Style>
+          <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Padding"
+                              Value="2" />
+            <Setter Property="Margin"
+                              Value="3" />
+            <Setter Property="HorizontalAlignment"
+                              Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment"
+                              Value="Right" />
+            <Setter Property="FontWeight"
+                              Value="Bold" />
+          </Style>
+          <Style TargetType="Rectangle">
+            <Setter Property="Height"
+                              Value="2" />
+            <Setter Property="Fill"
+                              Value="LightBlue" />
+            <Setter Property="Margin"
+                              Value="100 8" />
+          </Style>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Number of Resultig Thermal Zones" />
+        <Label Grid.Row="2"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Number of Buildings" />
+        <Label Grid.Row="3"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Number of Buildings With BuildingPart" />
+        <Label Grid.Row="4"
+                         Grid.Column="0"
+                         HorizontalAlignment="Right"
+                         Content="Number of BuildingParts" />
+        <!--TextBox Grid.Row="0"
+                           Grid.Column="1"
+                           IsReadOnly="True"
+                           x:Name="NoThermalZones" /-->
+
+        <DockPanel Grid.Row="0"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="2">
+          <Label Content="Without BuildingParts" />
+          <TextBox HorizontalAlignment="Stretch"
+                             Width="auto"
+                             IsReadOnly="True"
+                             Text="{Binding BuildingStats.TotalBuildings, Mode=OneTime}" />
+        </DockPanel>
+        <DockPanel Grid.Row="0"
+                             Grid.Column="3"
+                             Grid.ColumnSpan="2">
+          <Label Content="With BuildingParts" />
+          <TextBox HorizontalAlignment="Stretch"
+                             Width="auto"
+                             IsReadOnly="True"
+                             Text="{Binding BuildingStats.MaxThermalZones, Mode=OneTime}" />
+        </DockPanel>
+        <TextBox Grid.Row="2"
+                           Grid.Column="1"
+                           IsReadOnly="True"
+                           Text="{Binding Path=BuildingStats.TotalBuildings, Mode=OneTime}" />
+        <TextBox Grid.Row="3"
+                           Grid.Column="1"
+                           IsReadOnly="True"
+                           Text="{Binding Path=BuildingStats.BuildingsWithParts, Mode=OneTime}" />
+        <TextBox Grid.Row="4"
+                           Grid.Column="1"
+                           IsReadOnly="True"
+                           Text="{Binding Path=BuildingPartStats.BuildingParts, Mode=OneTime}" />
+        <Rectangle Grid.Row="1"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="6" />
+
+        <!--<TextBox Grid.Row="1"
+                     Grid.Column="2"
+                     IsReadOnly="True"
+                     Text="{Binding Path=BuildingStats.TotalBuildings, Mode=OneTime}" />-->
+      </Grid>
+      <Rectangle />
+    </StackPanel>
+  </Expander>
+
+</UserControl>

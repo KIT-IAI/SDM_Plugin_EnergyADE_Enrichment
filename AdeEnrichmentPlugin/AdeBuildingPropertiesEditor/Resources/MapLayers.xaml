@@ -1,0 +1,61 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:map="clr-namespace:MapControl;assembly=MapControl.WPF">
+    <map:MapTileLayer
+        x:Key="OpenStreetMap"
+        TileSource="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        SourceName="OpenStreetMap"
+        Description="© [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)"/>
+    <map:MapTileLayer
+        x:Key="OpenStreetMapGerman"
+        TileSource="https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png"
+        SourceName="OpenStreetMap German"
+        Description="© [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)"/>
+    <map:MapTileLayer
+        x:Key="OpenStreetMapFrench"
+        TileSource="http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
+        SourceName="OpenStreetMap French"
+        Description="© [OpenStreetMap France](https://www.openstreetmap.fr/mentions-legales/) © [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)"/>
+    <map:MapTileLayer
+        x:Key="VirtualCitySystems"
+        TileSource="https://osm.virtualcitymap.de/mapproxy/wmts/osm/osm_grid/{z}/{x}/{y}.png"
+        SourceName="OSM (VirtualCitySystems)"
+        Description="© [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)" />
+    <map:MapTileLayer
+        x:Key="OpenTopoMap"
+        TileSource="https://tile.opentopomap.org/{z}/{x}/{y}.png"
+        SourceName="OpenTopoMap"
+        Description="© [OpenTopoMap](https://opentopomap.org/) © [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)"/>
+    <map:MapTileLayer
+        x:Key="Seamarks"
+        TileSource="https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png"
+        SourceName="Seamarks"
+        MinZoomLevel="9"
+        MaxZoomLevel="18"/>
+    <map:WmtsTileLayer
+        x:Key="TopPlusOpenWMTS"
+        CapabilitiesUri="https://sgx.geodatenzentrum.de/wmts_topplus_open/1.0.0/WMTSCapabilities.xml"
+        SourceName="TopPlusOpen"
+        Description="© [BKG](https://gdz.bkg.bund.de/index.php/default/webdienste/topplus-produkte/wmts-topplusopen-wmts-topplus-open.html)"/>
+    <map:WmsImageLayer
+        x:Key="TopPlusOpenWMS"
+        ServiceUri="https://sgx.geodatenzentrum.de/wms_topplus_open"
+        Description="© [BKG](https://gdz.bkg.bund.de/index.php/default/webdienste/topplus-produkte/wms-topplusopen-mit-layer-fur-normalausgabe-und-druck-wms-topplus-open.html)"
+        RelativeImageSize="1.2"/>
+    <map:WmsImageLayer
+        x:Key="OpenStreetMapWMS"
+        ServiceUri="http://ows.terrestris.de/osm/service"
+        Description="© [terrestris GmbH &amp; Co. KG](http://ows.terrestris.de/) © [OpenStreetMap contributors](http://www.openstreetmap.org/copyright)"
+        RelativeImageSize="1.2"/>
+    <map:WmsImageLayer
+        x:Key="DOP-BW"
+        ServiceUri="https://owsproxy.lgl-bw.de/owsproxy/ows/WMS_LGL-BW_ATKIS_DOP_20_C"
+        Description="©LGL-BW (2024) Datenlizenz Deutschland - Namensnennung - Version 2.0, www.lgl-bw.de"
+        RelativeImageSize="1.0"/>
+    <map:WmsImageLayer
+        x:Key="DOP-RLP"
+        ServiceUri="https://geo4.service24.rlp.de/wms/rp_dop20.fcgi?layers=rp_dop20"
+        Description="©GeoBasis-DE / LVermGeoRP (Jahr des Datenbezugs), dl-de/by-2-0, http://www.lvermgeo.rlp.de"
+        RelativeImageSize="1.0"/>
+</ResourceDictionary>
