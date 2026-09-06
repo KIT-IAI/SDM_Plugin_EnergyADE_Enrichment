@@ -36,7 +36,9 @@ The user interface is based on WPF (Windows Presentation Foundation) and is deve
 	url          = {https://github.com/KIT-IAI/SDM_Plugin_EnergyADE_Enrichment},
 	year         = {2024}
 }
+```
 
+```bibtex
 @inproceedings{Geiger.2024,
    author       = {Geiger, Andreas; Häfele, Karl-Heinz; Hagenmeyer, Veit},
    title        = {CityGML Data Preparation for Thermal Building Simulation on District Level},
