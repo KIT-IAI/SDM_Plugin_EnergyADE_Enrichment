@@ -49,6 +49,7 @@ The user interface is based on WPF (Windows Presentation Foundation) and is deve
   address       = {Wien, Österreich},
   month         = {September},
   publisher     = {TU Wien},
+  doi           = {10.26868/29761662.2024.14},
   isbn          = {978-3-200-10068-8}
 }
 ```
